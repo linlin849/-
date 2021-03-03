@@ -1,0 +1,38 @@
+{
+	    "name": "夸克搜索",
+	    "url": "quark.sm.cn",
+	    "version": 100,
+	    "search": {
+	        "url": "https://quark.sm.cn/s?q=${key}",
+	        "list": "div#results>div:not(:matches(新版小说|书圈|其他人|智能推荐|词典|腾讯|相关|微博|豆瓣|知乎|哔哩哔哩))",
+	        "name": "class.c-header-title c-line-clamp-2 icon-right",
+	        "author": "class.c-e-source--v1_0_0 c-e-source-l",
+	        "cover": "",
+	        "detail": "class.c-margin-top-m a"
+	    },
+	    "detail": {
+	        "name": "title",
+	        "author": "li:matches(作者),p:matches(作者),div:not(:has(div)):matches(作者),
+	        "cover": "",
+	        "summary": "li:matches(简介),p:matches(简介),div:not(:has(div)):matches(简介)",
+	        "status": "",
+	        "update": "",
+	        "lastChapter": "",
+	        "catalog": "a:matches(目录|列表|章节)"
+	    },
+	    "catalog": {
+	        "list": "*:has(>ul):matches(第|章|Chapter|直达页面底部)>ul a,
+*:not(:has(div)):has(>*:has(>a)):matches(第|章|Chapter|直达页面底部) a,
+div:containsOwn(章)>a",
+	        "booklet": {
+	            "name": "",
+	            "list": ""
+	        },
+	        "name": "a",
+	        "chapter": "a"
+	    },
+	    "chapter": {
+	        "content": "*:containsOwn(。)@all,*:has(>p:containsOwn(。))",
+	        "purify": [""]
+	    }
+	}
